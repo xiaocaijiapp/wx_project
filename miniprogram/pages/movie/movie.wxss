@@ -1,0 +1,120 @@
+@import '../../style/guide.wxss'
+
+.scroll_box{
+  background-color: #fff;
+}
+.pos_search{
+  width:100%;
+  height:75rpx;
+  background-color: #fff;
+  border-bottom:1px solid rgb(238, 235, 235);
+  display:flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  color:#999;
+  font-size:26rpx;
+  padding-left:20rpx;
+}
+.item1{
+  width:120rpx;
+  height:100%;
+  padding-top:18rpx;
+}
+.search-btn{
+  height:100%;
+  width:74rpx;
+  text-align: center;
+  padding-top:14rpx;
+  border-left:1px solid rgb(238, 235, 235);
+}
+.compons{
+  width:520rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color:#313030;
+  font-weight: 600;
+  font-size:28rpx;
+}
+.active{
+  color:#f30213;
+}
+.hots_box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width:100%;
+}
+.movic_item{
+  width:100%;
+  height:250rpx;
+  display:flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  padding:20rpx;
+  border-bottom:1px solid #ccc;
+}
+.movic_item .img{
+  width:180rpx;
+  height:100%;
+}
+.Introduction{
+  width:400rpx;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bigTitle{
+  font-size:32rpx;
+  color:#2c2b2b;
+  font-weight:800;
+}
+.describe{
+  font-size:26rpx;
+  color:#535151;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+}
+.smmsg{
+  font-size:26rpx;
+  color:#a2a1a1;
+}
+.btn_hz{
+  width:100rpx;
+  height:100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.score{
+  font-size:26rpx;
+  display:block;
+  color:#edaa39;
+}
+.btn{
+  display:block;
+  width:100rpx;
+  height:50rpx;
+  background:#f30213;
+  font-size:24rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  line-height: 50rpx;
+  color:#fff;
+  margin-top:80rpx;
+}
+.loading{
+  width:100%;
+  height:50rpx;
+  font-size:30rpx;
+  color:#666;
+  text-align: center;
+}
+ 

@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/cinema/cinema",
+    "pages/profile/profile",
+    "pages/city/city"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否可以获取您的位置"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#f30213",
+    "onReachBottomDistance": 200
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#f30213",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "./images/tabbar/movie.png",
+        "selectedIconPath": "./images/tabbar/movie_active.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "./images/tabbar/cinema.png",
+        "selectedIconPath": "./images/tabbar/cinema_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "./images/tabbar/profile.png",
+        "selectedIconPath": "./images/tabbar/profile_active.png"
+      }
+    ]
+  }
+}

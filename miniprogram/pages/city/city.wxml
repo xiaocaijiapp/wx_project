@@ -1,0 +1,4 @@
+<!--miniprogram/pages/city/city.wxml-->
+<view>
+  <city data="{{city}}" my-city="北京" binddetail="binddetail" config="{{config}}"></city>
+</view>

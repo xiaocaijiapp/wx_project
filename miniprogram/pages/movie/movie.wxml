@@ -1,0 +1,37 @@
+<view class="scroll_box" style="height:{{winHeight}}px">
+  <view class="aaaa" style="height:{{winHeight}}px;" >
+    <view class="pos_search">
+      <view class="item1">
+        <van-icon name="location-o" custom-style="font-size:30rpx;"></van-icon>
+        <text style="font-size:30rpx;" bindtap="cityChange">{{city}}</text>
+      </view>
+      <view class="compons">
+        <view bindtap="clickTab" data-current="1" class=" {{current == 1 ? 'active' : ''}}">热映</view>
+        <view bindtap="clickTab" data-current="0" class=" {{current == 0 ? 'active' : ''}}">待映</view>
+      </view>
+      <view class="search-btn">
+        <van-icon name="search" custom-style="font-size:50rpx;color:#f30213;"></van-icon>
+      </view>
+    </view>
+    <view class="hots_box" wx:if="{{current == 1}}">
+      <view class="movic_item" wx:for="{{movieList}}"  wx:key="index">
+        <image class="img" src="{{item.images.small}}"></image>
+        <view class="Introduction">
+          <text class="bigTitle">{{item.title}}</text>
+          <text class="describe">{{item.genres}}</text>
+          <text class="describe">主演：<text>{{item.casts[0].name}},{{item.casts[1].name}},{{item.casts[2].name}}</text></text>
+          <text class="smmsg">{{item.year}}</text>
+        </view>
+        <view class="btn_hz">
+          <text class="score">{{item.rating.average}}分</text>
+          <view class="btn">购票</view>
+        </view>
+      </view>
+    </view>
+    <view class="await_box" wx:else>
+      <view>222222222222</view>
+    </view>
+    <view hidden="{{isHidden}}" class="loading">正在加载...</view>
+    <view hidden="{{isShow}}" class="loading">数据加载完了...</view>
+  </view>
+</view>
