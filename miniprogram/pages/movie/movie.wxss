@@ -117,4 +117,29 @@
   color:#666;
   text-align: center;
 }
- 
+.welcome{
+  width:100%;
+  height:50rpx;
+  color:#666;
+  font-size: 26rpx;
+  text-align: left;
+  display: block;
+  line-height: 50rpx;
+  padding-left:28rpx;
+}
+.scoll_y_box{
+  white-space: nowrap;
+  justify-content: space-around;
+}
+.scoll_y_items{
+  width:220rpx;
+  height:360rpx;
+  background-color:red;
+  display:inline-block;
+  margin:0 15rpx;
+}
+.items-img{
+  width:100%;
+  height:280rpx;
+  
+}

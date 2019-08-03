@@ -1,7 +1,6 @@
 // 导入数据，可以ajax获取
 let City = require('../../utils/allcity.js');
 Page({
-
   data: {
     city: City,
     config: {

@@ -29,7 +29,25 @@
       </view>
     </view>
     <view class="await_box" wx:else>
-      <view>222222222222</view>
+      <view>
+        <text class="welcome">近期最受欢迎</text>
+        <scroll-view class="scoll_y_box" scroll-x="true" scroll-with-animation="true">
+          <view class="scoll_y_items">
+            <image class="items-img"></image>
+            <text class="items-title"></text>
+            <text class="items-numb"></text>
+            <text class="items-date"></text>
+          </view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+          <view class="scoll_y_items"></view>
+        </scroll-view>
+      </view>
     </view>
     <view hidden="{{isHidden}}" class="loading">正在加载...</view>
     <view hidden="{{isShow}}" class="loading">数据加载完了...</view>

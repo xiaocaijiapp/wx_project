@@ -2,13 +2,9 @@
 var amapFile = require('../../libs/amap-wx.js')
 let City = require('../../utils/allcity.js')
 Component({
-    /**
-     * 组件的属性列表
-     */
+    /*组件的属性列表*/
     properties: {
-        /**
-         * 城市数据
-         */
+        /* 城市数据*/
         data: {
             type: Object,
             value: {},
@@ -16,9 +12,7 @@ Component({
                 this.resetRight(newVal);
             }
         },
-        /**
-         * 配置项
-         */
+        /*配置项*/
         config: {
             type: Object,
             value: {
@@ -29,9 +23,7 @@ Component({
                 suctionTop: true // 是否开启标题吸顶
             }
         },
-        /**
-         * 是否定位我的位置
-         */
+        /*是否定位我的位置*/
         myCity: {
             type: Boolean,
             value: false,
@@ -63,16 +55,14 @@ Component({
         moveDistance: 0
     },
     ready() {
-        // let data = this.data.data;
-        // this.resetRight(data);
-        // if (this.data.myCity) {
-        //   this.getCity()
-        // }
+        let data = this.data.data;
+        this.resetRight(data);
+        if (this.data.myCity) {
+          this.getCity()
+        }
     },
     methods: {
-        /**
-         * 数据重新渲染
-         */
+        /**数据重新渲染*/
         resetRight(data) {
             let rightArr = []
             if (this.data.myCity) {
@@ -97,28 +87,14 @@ Component({
                 }
             })
         },
-        // getCity() {
-        //   wx.getLocation({
-        //     type: 'wgs84',
-        //     success: function (res) {
-        //       this.latitude = res.latitude;
-        //       this.longitude = res.longitude;
-        //       // console.log(res)
-        //     }
-        //   })
-        // },
-        /**
-         * 右侧字母点击事件
-         */
+        /**右侧字母点击事件*/
         jumpMt(e) {
             let jumpNum = e.currentTarget.dataset.id;
             this.setData({
                 jumpNum
             });
         },
-        /**
-         * 列表点击事件
-         */
+        /*列表点击事件*/
         detailMt(e) {
             let detail = e.currentTarget.dataset.detail;
             let myEventOption = {
@@ -140,9 +116,7 @@ Component({
         searchMt() {
             this._search();
         },
-        /**
-         * 搜索相关逻辑实现
-         */
+        /*搜索相关逻辑实现*/
         _search() {
           console.log(this.data.data);
             let data = this.data.data;

@@ -15,6 +15,16 @@ Page({
     MapKey: 'e7553c3f5d8a44616fb089ffe3dcd23f',
     city:'' 
   },
+  //获取本周口碑数据
+  getMouth(){
+    wx.cloud.callFunction({
+      name:'Word_of_mouth'
+    }).then(res=>{
+      console.log(JSON.parse(res.result));
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
   cityChange(){
     wx.navigateTo({
       url: "/pages/city/city",
@@ -47,6 +57,8 @@ Page({
       console.log(res)
     })
     this.requestDate();
+    //获取口碑数据
+    this.getMouth();
   },
   getPos(){
     return new Promise((resolve,reject)=>{
