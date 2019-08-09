@@ -1,0 +1,87 @@
+<view class="imges_box">
+  <image class="largeImg" src="{{details.images.large}}"></image>
+  <view class="pos_box"></view>
+  <view class="details_box">
+    <view class="box_top">
+      <image class="movie_sm" src="{{details.images.small}}"></image>
+      <view class="details_js">
+        <text class="movie_title">{{details.original_title}}</text>
+        <text class="movie_sm_title">{{details.aka}}</text>
+        <van-rate count="6" size="13" allow-half="{{true}}" value="{{ details.rating.average/2 }}" bind:change="onChange"/>
+        <text class="movie_genres">{{details.genres}}</text>
+        <text class="movie_genres">{{details.countries}}/{{details.durations}}</text>
+        <text class="movie_genres">{{details.pubdates[1]}}</text>
+      </view>
+    </view>
+    <view class="box_bottom">
+      <view class="btn_bg"  size="mini"><van-icon name="like-o" />看过</view>
+      <view class="btn_bg"><van-icon name="star-o" />评论</view>
+    </view>
+  </view>
+</view>
+<view class="text_box">
+  <view wx:if="{{iszs}}" class="text_sm">{{details.summary}}</view>
+  <view class="text_large" wx:else>{{details.summary}}</view>
+  <view bindtap="textChange" class="changeText">{{isZk}}</view>
+</view>
+<view class="movie_person">
+  <view class="yzry">演职人员</view>
+  <scroll-view class="scollbox" scroll-x="true" scroll-with-animation="true">
+    <view class="person_items" wx:for="{{details.casts}}" wx:key="index">
+      <image class="person_img" src="{{item.avatars.small}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text class="name">{{item.name_en}}</text>
+    </view>
+  </scroll-view>
+</view>
+<view class="pf_box">
+  <text class="pf">票房</text>
+  <view class="pfms">
+    <view class="pfjs">
+      <text class="t_color">{{details.wish_count}}</text>
+      <text class="lj">昨日票房榜</text>
+    </view>
+    <view class="pfjs">
+      <text class="t_color">{{details.reviews_count}}</text>
+      <text class="lj">首周票房(万)</text>
+    </view>
+    <view class="pfjs">
+      <text class="t_color">{{details.ratings_count}}</text>
+      <text class="lj">累计票房(万)</text>
+    </view>
+  </view>
+</view>
+<view class="cast_box">
+  <text class="cast_photo_title">剧照</text>
+  <scroll-view class="cast_scroll" scroll-x="true" scroll-with-animation="true">
+    <block wx:for="{{details.bloopers}}" wx:key="{{index}}">
+      <video poster="{{item.small}}" enable-play-gesture="{{true}}" controls="{{true}}"  object-fit="{{contain}}"  class="photo_img" src="{{item.resource_url}}"></video>
+    </block>
+    <block wx:for="{{details.photos}}" wx:key="{{index}}">
+    <image mode="{{widthFix}}" class="photo_img" src="{{item.image}}"></image>
+    </block>
+  </scroll-view>
+</view>
+<!-- 观众影评 -->
+<view>
+<view class="comments_title">
+  <text>观众评论</text>
+  <text class="write_pl">写评论</text>
+</view>
+  <block wx:for="{{details.popular_comments}}" wx:key="index">
+    <view class="person_comments">
+      <view>
+        <image class="comments_img" src="{{item.author.avatar}}"></image>
+      </view>
+      <view class="context">
+        <text class="comment_name">{{item.author.name}}</text>
+        <view class="comment_contain">{{item.content}}</view>
+        <view class="comment_time">
+          <text class="time_s">{{item.created_at}}</text>
+          <text class="time_s">{{item.useful_count}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+

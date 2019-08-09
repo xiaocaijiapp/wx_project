@@ -3,7 +3,9 @@
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/profile/profile",
-    "pages/city/city"
+    "pages/city/city",
+    "pages/details/details",
+    "pages/search/search"
   ],
   "permission": {
     "scope.userLocation": {

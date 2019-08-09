@@ -1,0 +1,262 @@
+.imges_box{
+  width:100%;
+  height:400rpx;
+  object-fit: cover;
+
+}
+.largeImg{
+  width:100%;
+  height:400rpx;
+  filter:blur(40rpx);/*模糊滤镜*/
+  opacity: .9;       /*透明度*/
+}
+.pos_box{
+  position: absolute; /*绝对定位*/
+   width:100%;         /*宽度和高度*/
+   height:400rpx;
+   background: #333; /*深色背景*/
+   top:0;
+   left:0;
+   z-index: -1;   /*显示底层*/
+}
+.details_box{
+  width:100%;
+  height:400rpx;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content: space-between;
+  padding:20rpx;
+  position: absolute;   /*定位*/
+  top:0;
+  left:0; 
+}
+.box_top{
+  width:100%;
+  height:300rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.details_js{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  padding-left:30rpx;
+}
+.movie_sm{
+  width:200rpx;
+  height:280rpx;
+}
+.box_bottom{
+  width:100%;
+  height:80rpx;
+}
+.movie_title{
+  color:#fff;
+  font-size:34rpx;
+}
+.movie_sm_title{
+  color:#fff;
+  font-size:20rpx;
+}
+.movie_genres{
+  color:#ccc;
+  font-size:26rpx;
+}
+.box_bottom{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.btn_bg{
+  width:340rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border:1px solid #ccc;
+  background-color:rgba(255,255,255,.3);
+  border-radius: 10rpx;
+  font-size:28rpx;
+  color:#fff;
+}
+.text_box{
+  padding: 20rpx;
+}
+.text_sm{
+  width:100%;
+  height:108rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size:26rpx;
+  color:#666;
+}
+.text_large{
+  font-size:26rpx;
+  color:#666;
+  width:100%;
+}
+.changeText{
+  text-align: center;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size:26rpx;
+  width:100%;
+  color:#666;
+  border:1px solid #ccc;
+  border-radius: 8rpx;
+}
+.yzry{
+  width:100%;
+  height:40rpx;
+  font-size:30rpx;
+}
+.movie_person{
+  width:100%;
+  height:320rpx;
+  padding:20rpx;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.scollbox{
+  width:100%;
+  height:240rpx;
+  white-space: nowrap;
+}
+.person_items{
+  width:150rpx;
+  height:240rpx;
+  display: inline-block;
+  margin: 0 4rpx;
+}
+.person_img{
+  width:130rpx;
+  height:160rpx;
+  object-fit: contain;
+}
+.name{
+  display: block;
+  font-size:22rpx;
+  color:#666;
+  text-align: center;
+}
+.pf_box{
+  width:100%;
+  height:200rpx;
+  padding:0 20rpx;
+  
+}
+.pf{
+  width:100%;
+  display: block;
+  font-size:30rpx;
+}
+.pfms{
+  width:100%;
+  height:160rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+.pfjs{
+  width:200rpx;
+  height:100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.pfjs>text{
+  display: block;
+}
+.lj{
+  color:#666;
+  font-size:30rpx;
+}
+.t_color{
+  color:#edaa39;
+  font-size:26rpx;
+}
+.cast_box{
+  padding:0 20rpx;
+}
+.cast_photo_title{
+  display:block;
+  font-size:30rpx;
+
+}
+.cast_scroll{
+  width:100%;
+  white-space: nowrap;
+  height:180rpx;
+  padding:20rpx 0; 
+}
+.cast_scroll .photo_img{
+  width:400rpx;
+  height:180rpx;
+  object-fit: cover;
+}
+.comments_title{
+  width:100%;
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  padding:0 20rpx;
+  font-size:30rpx;
+  align-items: center;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.write_pl{
+  display: inline-block;
+  font-size:28rpx;
+  border:1px solid #f30213;
+  width:100rpx;
+  height:50rpx;
+  color:#f30213;
+  text-align: center;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+}
+.person_comments{
+  width:100%;
+  padding:20rpx;
+  display:flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.comments_img{
+  display: block;
+  width:50rpx;
+  height:50rpx;
+  border-radius: 50%;
+}
+.context{
+  padding:0 30rpx;
+  display:flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  width:660rpx;
+}
+.comment_name{
+  font-size:24rpx;
+  margin-bottom:20rpx;
+}
+.comment_contain{
+  font-size:26rpx;
+  color:#666;
+}
+.comment_time{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.time_s{
+  display: block;
+  color:#666;
+  font-size:26rpx;
+}

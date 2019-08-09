@@ -13,14 +13,61 @@ Page({
     start:0,
     count:10,
     MapKey: 'e7553c3f5d8a44616fb089ffe3dcd23f',
-    city:'' 
+    city:'' ,
+    dyLists:[],
+    upcomingLists:[],
+    xstart:0
+  },
+  searchBtn(){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
+  jumpDetails(e){
+    var _id=e.currentTarget.dataset.uid
+    console.log(_id);
+    if(e.target.id == 'btn'){
+      return
+    }else{
+      wx.navigateTo({
+        url: '/pages/details/details?_id='+_id,
+      })
+    }
+    
+  },
+  //获取即将上映的电影列表
+  getUpcoming(xstart = 0){
+    //调用云函数
+    wx.cloud.callFunction({
+      name:'TheUpcoming',
+      data:{
+        xstart
+      }
+    })
+    .then(res=>{
+      const upcomintList = JSON.parse(res.result).subjects
+      console.log(upcomintList);
+      if(res){
+        this.setData({
+          xstart: this.data.xstart + 10,
+          upcomingLists: this.data.upcomingLists.concat(upcomintList)
+        })
+      }
+    })
+    .catch(err=>{
+      console.log(err);
+    })
   },
   //获取本周口碑数据
   getMouth(){
     wx.cloud.callFunction({
       name:'Word_of_mouth'
     }).then(res=>{
-      console.log(JSON.parse(res.result));
+      var movieArr = JSON.parse(res.result).subjects
+      this.setData({
+        dyLists: movieArr
+      })
+      // console.log(movieArr);
     }).catch(err=>{
       console.log(err);
     })
@@ -43,6 +90,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取即将上映的电影
+    this.getUpcoming();
     //给header设置内容
     wx.setNavigationBarTitle({ title: '猫眼电影' })  
     this.setData({
@@ -54,7 +103,6 @@ Page({
       this.setData({
         city : res
       })
-      console.log(res)
     })
     this.requestDate();
     //获取口碑数据
@@ -88,7 +136,6 @@ Page({
       },
     }).then(res => {
       if(res){
-        console.log(JSON.parse(res.result));
         this.setData({
           start:this.data.start + 10
         })
@@ -154,6 +201,8 @@ Page({
    */
   onReachBottom: function () {
     this.requestDate(this.data.start)
+    console.log(this.data.xstart);
+    this.getUpcoming(this.data.xstart)
   },
 
   /**

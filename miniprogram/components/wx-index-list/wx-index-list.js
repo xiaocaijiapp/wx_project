@@ -1,5 +1,5 @@
 // component/wx-index-list/wx-index-list.js
-var amapFile = require('../../libs/amap-wx.js')
+// var amapFile = require('../../libs/amap-wx.js')
 let City = require('../../utils/allcity.js')
 Component({
     /*组件的属性列表*/
@@ -43,7 +43,7 @@ Component({
     data: {
         list: [],
         rightArr: [], // 右侧字母展示
-        jumpNum: '', //跳转到那个字母
+        jumpNum: 'D', //跳转到那个字母
         myCityName: '请选择', // 默认我的城市
         topGroup: [], // 内容高度数据
         pos: {

@@ -1,0 +1,10 @@
+<van-search value="{{ value }}" bind:search="searchContain" placeholder="请输入搜索关键词" />
+<scroll-view scroll-y="true">
+  <view class="song_box">
+    <view class="song_name">
+      <text class="name_t">海阔天空</text>
+      <text class="ydname">BEYOND乐与怒</text>
+    </view>
+    <view class="song_play">111</view>
+  </view>
+</scroll-view>

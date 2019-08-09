@@ -1,5 +1,5 @@
 <view class="scroll_box" style="height:{{winHeight}}px">
-  <view class="aaaa" style="height:{{winHeight}}px;" >
+  <view class="aaaa" style="height:{{winHeight}}px;">
     <view class="pos_search">
       <view class="item1">
         <van-icon name="location-o" custom-style="font-size:30rpx;"></van-icon>
@@ -10,11 +10,11 @@
         <view bindtap="clickTab" data-current="0" class=" {{current == 0 ? 'active' : ''}}">待映</view>
       </view>
       <view class="search-btn">
-        <van-icon name="search" custom-style="font-size:50rpx;color:#f30213;"></van-icon>
+        <van-icon name="search" bindtap="searchBtn" custom-style="font-size:50rpx;color:#f30213;"></van-icon>
       </view>
     </view>
     <view class="hots_box" wx:if="{{current == 1}}">
-      <view class="movic_item" wx:for="{{movieList}}"  wx:key="index">
+      <view bindtap="jumpDetails"  class="movic_item" wx:for="{{movieList}}" wx:key="index" data-uid="{{item.id}}">
         <image class="img" src="{{item.images.small}}"></image>
         <view class="Introduction">
           <text class="bigTitle">{{item.title}}</text>
@@ -24,29 +24,38 @@
         </view>
         <view class="btn_hz">
           <text class="score">{{item.rating.average}}分</text>
-          <view class="btn">购票</view>
+          <view class="btn" id="btn">购票</view>
         </view>
       </view>
     </view>
     <view class="await_box" wx:else>
+      <!-- 近期最受欢迎 -->
       <view>
         <text class="welcome">近期最受欢迎</text>
         <scroll-view class="scoll_y_box" scroll-x="true" scroll-with-animation="true">
-          <view class="scoll_y_items">
-            <image class="items-img"></image>
-            <text class="items-title"></text>
-            <text class="items-numb"></text>
-            <text class="items-date"></text>
+          <view bindtap="jumpDetails" class="scoll_y_items" wx:for="{{dyLists}}" wx:key="index" data-uid="{{item.id}}">
+            <image class="items-img" src="{{item.subject.images.small}}"></image>
+            <text class="items-title">{{item.subject.title}}</text>
+            <text class="items-numb">{{item.subject.collect_count}}人想看</text>
+            <text class="items-date">{{item.subject.year}}</text>
           </view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
-          <view class="scoll_y_items"></view>
         </scroll-view>
+      </view>
+      <!-- 即将上映 -->
+      <view class="upcoming">
+            <view bindtap="jumpDetails"   class="movic_item" wx:for="{{upcomingLists}}" wx:key="index" data-uid="{{item.id}}">
+                <image class="img" src="{{item.images.small}}"></image>
+                <view class="Introduction">
+                  <text class="bigTitle">{{item.title}}</text>
+                  <text class="describe">{{item.genres}}</text>
+                  <text class="describe">主演：<text>{{item.casts[0].name}},{{item.casts[1].name}},{{item.casts[2].name}}</text></text>
+                  <text class="smmsg">{{item.pubdates}}</text>
+            </view>
+            <view  class="btn_hz" style="width:120rpx;">
+              <text class="score">{{item.collect_count+ '想看'}}</text>
+              <view class="btn" id="btn" style="background:pink">预售</view>
+            </view>
+          </view>
       </view>
     </view>
     <view hidden="{{isHidden}}" class="loading">正在加载...</view>

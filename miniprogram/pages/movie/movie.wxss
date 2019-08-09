@@ -1,68 +1,78 @@
 @import '../../style/guide.wxss'
 
-.scroll_box{
-  background-color: #fff;
+
+.upcoming{
+  margin-top:20rpx;
 }
-.pos_search{
-  width:100%;
-  height:75rpx;
+.pos_search {
+  width: 100%;
+  height: 75rpx;
   background-color: #fff;
-  border-bottom:1px solid rgb(238, 235, 235);
-  display:flex;
+  border-bottom: 1px solid rgb(238, 235, 235);
+  display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
   align-items: center;
-  color:#999;
-  font-size:26rpx;
-  padding-left:20rpx;
+  color: #999;
+  font-size: 26rpx;
+  padding-left: 20rpx;
 }
-.item1{
-  width:120rpx;
-  height:100%;
-  padding-top:18rpx;
+
+.item1 {
+  width: 120rpx;
+  height: 100%;
+  padding-top: 18rpx;
 }
-.search-btn{
-  height:100%;
-  width:74rpx;
+
+.search-btn {
+  height: 100%;
+  width: 74rpx;
   text-align: center;
-  padding-top:14rpx;
-  border-left:1px solid rgb(238, 235, 235);
+  padding-top: 14rpx;
+  border-left: 1px solid rgb(238, 235, 235);
 }
-.compons{
-  width:520rpx;
+
+.compons {
+  width: 520rpx;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  color:#313030;
+  color: #313030;
   font-weight: 600;
-  font-size:28rpx;
+  font-size: 28rpx;
 }
-.active{
-  color:#f30213;
+
+.active {
+  color: #f30213;
 }
-.hots_box{
+
+.hots_box {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: nowrap;
-  width:100%;
+  width: 100%;
 }
-.movic_item{
-  width:100%;
-  height:250rpx;
-  display:flex;
+
+.movic_item {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
-  padding:20rpx;
-  border-bottom:1px solid #ccc;
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+  background:#fff;
 }
-.movic_item .img{
-  width:180rpx;
-  height:100%;
+
+.movic_item .img {
+  width: 180rpx;
+  height: 100%;
 }
-.Introduction{
-  width:400rpx;
-  height:100%;
+
+.Introduction {
+  width: 400rpx;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-flow: column nowrap;
@@ -70,76 +80,116 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.bigTitle{
-  font-size:32rpx;
-  color:#2c2b2b;
-  font-weight:800;
+
+.bigTitle {
+  font-size: 32rpx;
+  color: #2c2b2b;
+  font-weight: 800;
 }
-.describe{
-  font-size:26rpx;
-  color:#535151;
+
+.describe {
+  font-size: 26rpx;
+  color: #535151;
   text-overflow: ellipsis;
   white-space: normal;
   overflow: hidden;
 }
-.smmsg{
-  font-size:26rpx;
-  color:#a2a1a1;
+
+.smmsg {
+  font-size: 26rpx;
+  color: #a2a1a1;
 }
-.btn_hz{
-  width:100rpx;
-  height:100%;
+
+.btn_hz {
+  width: 100rpx;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
 }
-.score{
-  font-size:26rpx;
-  display:block;
-  color:#edaa39;
+
+.score {
+  font-size: 26rpx;
+  display: block;
+  color: #edaa39;
 }
-.btn{
-  display:block;
-  width:100rpx;
-  height:50rpx;
-  background:#f30213;
-  font-size:24rpx;
+
+.btn {
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+  background: #f30213;
+  font-size: 24rpx;
   text-align: center;
   border-radius: 5rpx;
   line-height: 50rpx;
-  color:#fff;
-  margin-top:80rpx;
+  color: #fff;
+  margin-top: 80rpx;
 }
-.loading{
-  width:100%;
-  height:50rpx;
-  font-size:30rpx;
-  color:#666;
+
+.loading {
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color: #666;
   text-align: center;
 }
-.welcome{
-  width:100%;
-  height:50rpx;
-  color:#666;
+
+.welcome {
+  width: 100%;
+  height: 50rpx;
+  color: #666;
   font-size: 26rpx;
   text-align: left;
   display: block;
   line-height: 50rpx;
-  padding-left:28rpx;
+  padding-left: 28rpx;
 }
-.scoll_y_box{
+
+.scoll_y_box {
   white-space: nowrap;
   justify-content: space-around;
+  background:#fff;
+  border-bottom:1px solid #ccc;
 }
-.scoll_y_items{
-  width:220rpx;
-  height:360rpx;
-  background-color:red;
-  display:inline-block;
-  margin:0 15rpx;
+
+.scoll_y_items {
+  width: 180rpx;
+  height: 320rpx;
+  display: inline-block;
+  padding: 0 10rpx;
 }
-.items-img{
-  width:100%;
-  height:280rpx;
-  
+
+.items-img {
+  display: block;
+  width: 100%;
+  height: 180rpx;
+  object-fit: cover;
+}
+
+.items-title {
+  width: 100%;
+  height: 40rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  font-size: 28rpx;
+  color: block;
+}
+
+.items-numb {
+  width: 100%;
+  height: 40rpx;
+  display: block;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.items-date {
+  width: 100%;
+  height: 30rpx;
+  display: block;
+  font-size: 24rpx;
+  color: #999;
 }
